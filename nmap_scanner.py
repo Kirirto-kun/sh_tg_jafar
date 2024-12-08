@@ -32,7 +32,7 @@ def scan():
 
         if not ip_address:
             return jsonify({"error": "Could not resolve domain to IP"}), 400
-
+        
         # Сканирование IP с Nmap
         nm.scan(hosts=ip_address, arguments='-T4 -F', timeout=30)
 
